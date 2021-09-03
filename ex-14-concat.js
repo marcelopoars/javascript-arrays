@@ -24,3 +24,16 @@ console.log({ newNumbers3 }); // [ 1, 2, 3, 4, 5, 6 ]
 // Copia os elementos do array e o valor 'JavaScript'
 let newNumbers4 = numbers.concat([3, 4], "JavaScript");
 console.log({ newNumbers4 }); // [ 1, 2, 3, 4, 'JavaScript' ]
+
+let coisas = [].concat([2,3,4], "teste")
+console.log({coisas});
+
+let objeto = {
+    [Symbol.isConcatSpreadable]: true,
+    length: 2,
+    0: 'Algum texto',
+    1: 5000,
+}
+
+let newCoisas = coisas.concat(objeto)
+console.log({newCoisas});

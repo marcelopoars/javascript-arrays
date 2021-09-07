@@ -4,6 +4,7 @@ function invalidas()  {
     const seriesInvalidas = series.filter(({anoEstreia}) => anoEstreia > anoAtual )
 
     let result = []
+    
     for (let serie of seriesInvalidas) {
         result.push(serie.titulo)
     }

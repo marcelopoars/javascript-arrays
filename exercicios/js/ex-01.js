@@ -1,7 +1,7 @@
 
-function invalidas(arr)  {
+function invalidas()  {
     const anoAtual = new Date().getFullYear();
-    const seriesInvalidas = arr.filter(({anoEstreia}) => anoEstreia > anoAtual )
+    const seriesInvalidas = series.filter(({anoEstreia}) => anoEstreia > anoAtual )
 
     let result = []
     for (let serie of seriesInvalidas) {
@@ -13,5 +13,6 @@ function invalidas(arr)  {
     return result
 }
 
-console.log(invalidas(series));
+console.log("*** Exercício 01 ***");
+console.log(invalidas());
 

@@ -1,9 +1,9 @@
 function mediaDeEpisodios() {
   const result = series.reduce(
-    (total, serie) => total + serie.numeroEpisodios,
+    (total, serie, _, array) => total + serie.numeroEpisodios / array.length,
     0
   );
-  return result / series.length;
+  return result;
 }
 
 console.log("*** Exercício 04 - Média de Episódios ***");

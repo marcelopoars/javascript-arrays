@@ -13,6 +13,6 @@ function invalidas()  {
     return result
 }
 
-console.log("*** Exercício 01 ***");
+console.log("*** Exercício 01 - Séries Inválidas ***");
 console.log(invalidas());
 

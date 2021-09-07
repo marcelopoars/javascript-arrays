@@ -10,6 +10,6 @@ function procurarPorNome(name) {
   return existeNome;
 }
 
-console.log("*** Exercício 03 ***");
+console.log("*** Exercício 03 - Eu sou um ator de séries? ***");
 console.log(procurarPorNome("Marcelo"));
 console.log(procurarPorNome("Winona Ryder"));

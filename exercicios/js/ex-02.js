@@ -3,5 +3,5 @@ function filtrarPorAno(ano) {
   return result
 }
 
-console.log("*** Exercício 02 ***");
+console.log("*** Exercício 02 - Séries a partir de um determinado ano ***");
 console.table(filtrarPorAno(2017));

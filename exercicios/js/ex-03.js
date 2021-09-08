@@ -1,15 +1,19 @@
-function procurarPorNome(name) {
-  let existeNome = false;
+function procurarPorNome(palavraDigitada) {
+  let souUmAtor = false;
 
   for (let serie of series) {
-    if (serie.elenco.includes(name)) {
-      existeNome = true;
+    for (let nome of serie.elenco) {
+      if (nome.indexOf(palavraDigitada) !== -1) {
+        souUmAtor = true;
+        return souUmAtor;
+      }
     }
   }
 
-  return existeNome;
+  return souUmAtor;
 }
 
 console.log("*** Exercício 03 - Eu sou um ator de séries? ***");
+console.log(procurarPorNome("Ryder"));
 console.log(procurarPorNome("Marcelo"));
-console.log(procurarPorNome("Winona Ryder"));
+console.log(procurarPorNome("Harbour"));

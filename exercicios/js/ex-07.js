@@ -16,7 +16,7 @@ function inverteNome(nomeOriginal) {
 
 function formatarCreditos(titulo, array) {
   console.log(titulo.toUpperCase());
-  for (let nome of array) {
+  for (let nome of array.sort()) {
     console.log(nome);
   }
 }
@@ -44,4 +44,4 @@ function creditos(palavraDigitada) {
 }
 
 console.log("*** Exercício 07 - Créditos ***");
-creditos("Bre");
+creditos("The");

@@ -1,9 +1,9 @@
 function invalidas() {
   const anoAtual = new Date().getFullYear();
-  const campoInvalido = null || undefined;
 
   const seriesInvalidas = series.filter(
     ({
+      titulo,
       anoEstreia,
       diretor,
       genero,
@@ -13,16 +13,19 @@ function invalidas() {
       distribuidora,
     }) =>
       anoEstreia > anoAtual ||
-      anoEstreia == campoInvalido ||
-      diretor == campoInvalido ||
-      genero == campoInvalido ||
-      elenco == campoInvalido ||
-      temporadas == campoInvalido ||
-      numeroEpisodios == campoInvalido ||
-      distribuidora == campoInvalido
+      !titulo ||
+      !anoEstreia ||
+      !diretor ||
+      !genero ||
+      !elenco ||
+      !temporadas ||
+      !numeroEpisodios ||
+      !distribuidora
   );
 
-  const result = seriesInvalidas.map(({ titulo }) => titulo).join(" - ");
+  const result = seriesInvalidas
+    .map(({ titulo }) => (titulo ? titulo : "Campo nome vazio"))
+    .join(" - ");
 
   return `Séries Inválidas: ${result}`;
 }

@@ -1,19 +1,31 @@
+function invalidas() {
+  const anoAtual = new Date().getFullYear();
+  const campoInvalido = null || undefined;
 
-function invalidas()  {
-    const anoAtual = new Date().getFullYear();
-    const seriesInvalidas = series.filter(({anoEstreia}) => anoEstreia > anoAtual )
+  const seriesInvalidas = series.filter(
+    ({
+      anoEstreia,
+      diretor,
+      genero,
+      elenco,
+      temporadas,
+      numeroEpisodios,
+      distribuidora,
+    }) =>
+      anoEstreia > anoAtual ||
+      anoEstreia == campoInvalido ||
+      diretor == campoInvalido ||
+      genero == campoInvalido ||
+      elenco == campoInvalido ||
+      temporadas == campoInvalido ||
+      numeroEpisodios == campoInvalido ||
+      distribuidora == campoInvalido
+  );
 
-    let result = []
-    
-    for (let serie of seriesInvalidas) {
-        result.push(serie.titulo)
-    }
+  const result = seriesInvalidas.map(({ titulo }) => titulo).join(" - ");
 
-    result = `Séries Inválidas: ${result.join(' - ')}`
-
-    return result
+  return `Séries Inválidas: ${result}`;
 }
 
 console.log("*** Exercício 01 - Séries Inválidas ***");
 console.log(invalidas());
-

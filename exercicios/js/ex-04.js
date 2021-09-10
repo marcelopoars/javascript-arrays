@@ -1,12 +1,11 @@
+const series = require('../js/series');
+
 console.log("*** Exercício 04 - Média de Episódios ***");
 
 function mediaDeEpisodios() {
-  const media = series.reduce(
-    (total, { numeroEpisodios }, _, array) =>
-      total + numeroEpisodios / array.length,
-    0
-  );
-  return media;
+  return series
+    .map(serie => serie.numeroEpisodios)
+    .reduce((subtotal, numeroEpisodios) => subtotal + numeroEpisodios) / series.length;
 }
 
 console.log(mediaDeEpisodios());

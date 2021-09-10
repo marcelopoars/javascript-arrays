@@ -112,7 +112,7 @@ const series = [
       "Guilherme Karkotli",
       "Jhonata Ávila",
       "Marcos Oliveira",
-      "Rafael Audibert",
+      "Bernardo",
     ],
     temporadas: 1,
     numeroEpisodios: 40,
@@ -224,4 +224,4 @@ const series = [
   },
 ];
 
-// module.exports = series;
+module.exports = series;

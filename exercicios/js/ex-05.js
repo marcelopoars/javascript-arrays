@@ -1,3 +1,5 @@
+console.log("*** Exercício 05 - Mascada em Série ***");
+
 function formatarMoeda(valor) {
   const result = valor.toLocaleString("pt-br", {
     style: "currency",
@@ -11,18 +13,13 @@ function totalSalarios(indiceDaSerie) {
   const salarioDiretor = 100000;
   const salarioElenco = 40000;
 
-  const totalSalarioDiretor =
-    salarioDiretor * series[indiceDaSerie].diretor.length;
+  const { diretor, elenco } = series[indiceDaSerie];
 
-  const totalSalarioElenco =
-    salarioElenco * series[indiceDaSerie].elenco.length;
+  const totalSalarioDiretor = diretor.length * salarioDiretor
+  const totalSalarioElenco = elenco.length * salarioElenco
 
-  let result = totalSalarioDiretor + totalSalarioElenco;
+  return formatarMoeda(totalSalarioDiretor + totalSalarioElenco)
 
-  result = formatarMoeda(result);
-
-  return result;
 }
 
-console.log("*** Exercício 05 - Mascada em Série ***");
-console.log(totalSalarios(1));
+console.log(totalSalarios(0));

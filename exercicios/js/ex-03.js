@@ -1,3 +1,5 @@
+console.log("*** Exercício 03 - Eu sou um ator de séries? ***");
+
 function procurarPorNome(palavraDigitada) {
   let souUmAtor = false;
 
@@ -13,7 +15,6 @@ function procurarPorNome(palavraDigitada) {
   return souUmAtor;
 }
 
-console.log("*** Exercício 03 - Eu sou um ator de séries? ***");
 console.log(procurarPorNome("Ryder"));
 console.log(procurarPorNome("Marcelo"));
 console.log(procurarPorNome("Harbour"));

@@ -1,10 +1,11 @@
+console.log("*** Exercício 04 - Média de Episódios ***");
+
 function mediaDeEpisodios() {
-  const result = series.reduce(
+  const media = series.reduce(
     (total, serie, _, array) => total + serie.numeroEpisodios / array.length,
     0
   );
-  return result;
+  return media;
 }
 
-console.log("*** Exercício 04 - Média de Episódios ***");
 console.log(mediaDeEpisodios());

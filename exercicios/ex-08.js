@@ -23,11 +23,11 @@ function gerarHashtag() {
   let hashtag = "";
 
   for (let nome of nomesComAbreviacao) {
-    hashtag += nome[nome.indexOf(".") - 1]
+    hashtag += nome[nome.indexOf(".") - 1];
   }
 
   return `#${hashtag}`;
 }
 
 console.log("*** Exercício 08 - hashtag secreta ***");
-console.log(gerarHashtag());;
+console.log(gerarHashtag());

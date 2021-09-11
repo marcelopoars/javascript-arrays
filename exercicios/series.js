@@ -6,7 +6,7 @@ const series = [
   {
     titulo: "Stranger Things",
     anoEstreia: 2016,
-    diretor: ["Matt Duffer", "Ross Duffer"],
+    diretor: ["Matt Duffer", "Ross Duffer", null],
     genero: ["Suspense", "Ficcao Cientifica", "Drama"],
     elenco: [
       "Winona Ryder",
@@ -224,4 +224,4 @@ const series = [
   },
 ];
 
-// module.exports = series;
+module.exports = series;

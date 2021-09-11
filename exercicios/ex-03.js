@@ -1,3 +1,5 @@
+const series = require("./series");
+
 console.log("*** Exercício 03 - Eu sou um ator de séries? ***");
 
 function procurarPorNome(palavraDigitada) {

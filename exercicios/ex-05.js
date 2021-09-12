@@ -2,6 +2,8 @@ const series = require("./series");
 
 console.log("*** Exercício 05 - Mascada em Série ***");
 
+// Vero sobre variáveis abreviadas - onde e quando usar
+// *** boas práticas e Clean Code
 const formatarMoeda = (v) =>
   v.toLocaleString("pt-br", {
     style: "currency",

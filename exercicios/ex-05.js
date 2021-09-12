@@ -8,12 +8,12 @@ const formatarMoeda = (v) =>
     currency: "BRL",
   });
 
-function totalSalarios(i) {
-  const salario = {
-    diretor: 100000,
-    elenco: 40000,
-  };
+const salario = {
+  diretor: 100000,
+  elenco: 40000,
+};
 
+function totalSalarios(i) {
   const { diretor, elenco } = series[i];
 
   const salarioDiretores = diretor.length * salario.diretor;
@@ -23,4 +23,4 @@ function totalSalarios(i) {
 }
 
 console.log(totalSalarios(0)); // R$ 640.000,00
-console.log(totalSalarios(1)); // R$ 1.040.000,00
+// console.log(totalSalarios(1)); // R$ 1.040.000,00

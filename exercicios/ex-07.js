@@ -1,33 +1,33 @@
+const series = require("./series");
+
 console.log("*** Exercício 07 - Créditos ***");
 
-const buscarSerie = (palavraDigitada) =>
-  series.filter(({ titulo }) => titulo.indexOf(palavraDigitada) !== -1);
+const inverteNome = (arr) =>
+  arr.map((n) => n.trim().split(" ").reverse().join(" "));
 
-function inverteNome(nomeOriginal) {
-  let arrayNome = nomeOriginal.trim().split(" ");
-  let ultimoNome = arrayNome.pop();
-  
-  arrayNome.unshift(ultimoNome);
-  return arrayNome.join(" ");
-}
-
-const ordenarNomes = (array) => array.sort().map((nome) => nome);
+const imprimeNome = (arr) => {
+  for (let n of arr.sort()) {
+    console.log(n);
+  }
+};
 
 function creditos(palavraDigitada) {
-  const series = buscarSerie(palavraDigitada);
-
-  const nomesDiretores = series.map(({ diretor }) =>
-    diretor.map((none) => inverteNome(none))
-  );
-  const nomesElenco = series.map(({ elenco }) =>
-    elenco.map((none) => inverteNome(none))
+  const serieEscolhida = series.filter(
+    ({ titulo }) => titulo.indexOf(palavraDigitada) !== -1
   );
 
+  const { diretor, elenco } = serieEscolhida[0];
 
-  console.log("DIRETORES");
-  console.log(ordenarNomes(nomesDiretores));
-  console.log("ELENCO");
-  console.log(ordenarNomes(nomesElenco));
+  const nomesDiretores = inverteNome(diretor);
+  const nomesElenco = inverteNome(elenco);
+
+  console.log(`\n${serieEscolhida[0].titulo}`);
+
+  console.log("\nDIRETORES");
+  imprimeNome(nomesDiretores);
+
+  console.log("\nELENCO");
+  imprimeNome(nomesElenco);
 }
 
-creditos("St");
+creditos("The");

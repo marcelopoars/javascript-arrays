@@ -57,7 +57,12 @@ const series = [
   {
     titulo: "The Walking Dead",
     anoEstreia: 2010,
-    diretor: ["Jolly Dale", "Caleb Womble", "Paul Gadd", "Heather Bellson"],
+    diretor: [
+      "Jolly Dale",
+      "Caleb Womble",
+      "Paul Gadd",
+      "Heather Bellson",
+    ],
     genero: ["Terror", "Suspense", "Apocalipse Zumbi"],
     elenco: [
       "Andrew Lincoln",
